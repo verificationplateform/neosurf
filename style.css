@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+}
+#wrapper{
+    width: 95%;
+    margin: 20px auto;
+    
+}
+footer{
+    margin-top:  25px;
+	padding: 35px;
+    color: #666;
+    font-weight: 600;
+	text-align: center;
+    background-color: #161616;
+}
+header{
+    background-color:  #110a74ee;
+    color: #fff;
+    
+}
+header div{
+    margin-left: 20px;
+    padding-bottom: 0;
+}
+.logo img{
+    width: 120px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+}
+.l-text{
+    font-size: 0.8em;
+    padding-bottom: 10px;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px ;
+	margin-bottom: 15px;
+	margin-top: 5px;
+    color: #110a74ee;
+    
+}
+.form h2{
+    font-size: 1.2em;
+}
+h2{
+    color: #e72582;
+}
+legend{
+    color: #110a74ee;
+    font-size: 1.25em;
+    font-weight: 600;
+}
+::placeholder{
+	color: #bbb;
+	padding-left: 5px;
+    font-size: 0.9em;
+}
+fieldset{
+    border-color: #eb93bd;
+    border-style: solid;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+button{
+	background: #e72582;   
+	border: 1px solid #e72582;
+	border-radius: 5px;
+	color: #FFF;
+	font-size: 0.8em;
+	margin-top: 10px;
+	padding: 10px 30px;
+}
+input[type="text"], input[type="email"], select{
+    display: block;
+    border: 1px solid #eb93bd;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    }
+    input:focus{
+        background-color: #8c9094;
+    }
+    @media screen and (min-width: 768px){
+        #wrapper {
+            width: 75%;
+            margin: auto;
+        }
+    }
